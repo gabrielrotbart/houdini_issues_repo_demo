@@ -1,0 +1,19 @@
+"""
+Requires that exactly one field must be supplied and that field must not be `null`.
+"""
+directive @oneOf on INPUT_OBJECT
+
+type Entry {
+  description: String!
+  id: ID!
+  name: String!
+}
+
+type Mutation {
+  """An example field added by the generator"""
+  testField: String!
+}
+
+type Query {
+  entries: [Entry!]!
+}
